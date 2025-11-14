@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/aspl_macbook_pro/Dev/flutter/frontend/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/res/values-night/styles.xml",
+                    "from": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,225",
+                        "endLines": "4,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "215,389"
+                    },
+                    "to": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,220",
+                        "endLines": "4,7",
+                        "endColumns": "12,12",
+                        "endOffsets": "215,384"
+                    }
+                }
+            ]
+        }
+    ]
+}

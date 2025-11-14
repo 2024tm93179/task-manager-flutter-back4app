@@ -1,0 +1,4 @@
+#Fri Nov 14 19:59:52 IST 2025
+base.0=/Users/aspl_macbook_pro/Dev/flutter/frontend/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

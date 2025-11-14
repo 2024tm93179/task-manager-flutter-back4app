@@ -1,0 +1,25 @@
+name: task_manager_app
+description: A Flutter Task Manager App with Back4App Backend
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.4
+  parse_server_sdk_flutter: ^3.1.0
+  shared_preferences: ^2.0.13
+  connectivity_plus: ^1.4.0
+  package_info_plus: ^1.4.2
+  path_provider: ^2.0.11
+  sembast: ^3.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

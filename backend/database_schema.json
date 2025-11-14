@@ -1,0 +1,143 @@
+{
+    "schema_version": "1.0",
+    "database": "Back4App Parse Server",
+    "classes": [
+        {
+            "className": "_User",
+            "description": "Built-in Parse User class for authentication",
+            "fields": [
+                {
+                    "name": "objectId",
+                    "type": "String",
+                    "description": "Unique identifier for the user",
+                    "auto_generated": true
+                },
+                {
+                    "name": "username",
+                    "type": "String",
+                    "description": "User's email address (used as username)",
+                    "required": true,
+                    "unique": true
+                },
+                {
+                    "name": "password",
+                    "type": "String",
+                    "description": "Encrypted password",
+                    "required": true,
+                    "encrypted": true
+                },
+                {
+                    "name": "email",
+                    "type": "String",
+                    "description": "User's email address",
+                    "required": true,
+                    "unique": true
+                },
+                {
+                    "name": "createdAt",
+                    "type": "Date",
+                    "description": "Account creation timestamp",
+                    "auto_generated": true
+                },
+                {
+                    "name": "updatedAt",
+                    "type": "Date",
+                    "description": "Last update timestamp",
+                    "auto_generated": true
+                }
+            ],
+            "permissions": {
+                "public_read": false,
+                "public_write": false,
+                "authenticated_read": true,
+                "authenticated_write": true
+            }
+        },
+        {
+            "className": "Task",
+            "description": "Stores user tasks with title and description",
+            "fields": [
+                {
+                    "name": "objectId",
+                    "type": "String",
+                    "description": "Unique identifier for the task",
+                    "auto_generated": true
+                },
+                {
+                    "name": "title",
+                    "type": "String",
+                    "description": "Task title",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "description": "Task description/details",
+                    "required": true
+                },
+                {
+                    "name": "user",
+                    "type": "Pointer<_User>",
+                    "description": "Reference to the user who created the task",
+                    "required": true
+                },
+                {
+                    "name": "createdAt",
+                    "type": "Date",
+                    "description": "Task creation timestamp",
+                    "auto_generated": true
+                },
+                {
+                    "name": "updatedAt",
+                    "type": "Date",
+                    "description": "Last update timestamp",
+                    "auto_generated": true
+                }
+            ],
+            "permissions": {
+                "public_read": false,
+                "public_write": false,
+                "authenticated_read": true,
+                "authenticated_write": true
+            },
+            "indexes": [
+                {
+                    "name": "user_index",
+                    "fields": [
+                        "user"
+                    ],
+                    "description": "Index for faster user-specific task queries"
+                },
+                {
+                    "name": "created_at_index",
+                    "fields": [
+                        "createdAt"
+                    ],
+                    "description": "Index for sorting tasks by creation date"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "from": "Task",
+            "to": "_User",
+            "type": "many-to-one",
+            "description": "Each task belongs to one user, a user can have many tasks"
+        }
+    ],
+    "security_rules": [
+        {
+            "rule": "Users can only read and write their own tasks",
+            "implementation": "Query filters tasks by current user pointer"
+        },
+        {
+            "rule": "All API requests require authentication",
+            "implementation": "Session token validation on every request"
+        },
+        {
+            "rule": "Passwords are encrypted",
+            "implementation": "Automatic bcrypt encryption by Parse Server"
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.task_manager_app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:4:5-66
+11-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[:connectivity_plus] /Users/aspl_macbook_pro/Dev/flutter/frontend/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
+12-->[:connectivity_plus] /Users/aspl_macbook_pro/Dev/flutter/frontend/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-76
+13
+14    <application
+14-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:6:5-28:19
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.6.0] /Users/aspl_macbook_pro/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+16        android:label="Task Manager" >
+16-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:7:9-37
+17        <activity
+17-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:8:9-24:20
+18            android:name="com.example.task_manager_app.MainActivity"
+18-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:9:13-41
+19            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+19-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:13:13-163
+20            android:exported="true"
+20-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:10:13-36
+21            android:hardwareAccelerated="true"
+21-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:14:13-47
+22            android:launchMode="singleTop"
+22-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:11:13-43
+23            android:theme="@style/LaunchTheme"
+23-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:12:13-47
+24            android:windowSoftInputMode="adjustResize" >
+24-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:15:13-55
+25            <meta-data
+25-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:16:13-19:17
+26                android:name="io.flutter.embedding.android.NormalTheme"
+26-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:17:15-70
+27                android:resource="@style/NormalTheme" />
+27-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:18:15-52
+28
+29            <intent-filter>
+29-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:20:13-23:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:21:17-68
+30-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:22:17-76
+32-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:22:27-74
+33            </intent-filter>
+34        </activity>
+35
+36        <meta-data
+36-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:25:9-27:33
+37            android:name="flutterEmbedding"
+37-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:26:13-44
+38            android:value="2" />
+38-->/Users/aspl_macbook_pro/Dev/flutter/frontend/android/app/src/main/AndroidManifest.xml:27:13-30
+39
+40        <uses-library
+40-->[androidx.window:window:1.0.0-beta04] /Users/aspl_macbook_pro/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+41            android:name="androidx.window.extensions"
+41-->[androidx.window:window:1.0.0-beta04] /Users/aspl_macbook_pro/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+42            android:required="false" />
+42-->[androidx.window:window:1.0.0-beta04] /Users/aspl_macbook_pro/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+43        <uses-library
+43-->[androidx.window:window:1.0.0-beta04] /Users/aspl_macbook_pro/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+44            android:name="androidx.window.sidecar"
+44-->[androidx.window:window:1.0.0-beta04] /Users/aspl_macbook_pro/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+45            android:required="false" />
+45-->[androidx.window:window:1.0.0-beta04] /Users/aspl_macbook_pro/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+46    </application>
+47
+48</manifest>
